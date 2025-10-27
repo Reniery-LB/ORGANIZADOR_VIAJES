@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Viajes</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Regitrar viaje</h1>
+            <form id="form-viaje">
+                <label>Nombre del viaje: </label>
+                <input type="text" placeholder="Escribe aquí" required/>
+                <br>
+                <label>Ciudad de destino: </label>
+                <input type="text" placeholder="Escribe aquí"required/>
+                <br>
+                <label>Fecha de salida: </label>
+                <input type="date" required/>
+                <br>
+                <label>Fecha de regreso: </label>
+                <input type="date" required/>
+                <br>
+                <label>Email de contacto: </label>
+                <input type="email" requierd/>
+                <br>
+                <button type="submit">Guardar viaje</button>
+            </form>
+        </section>
+
+        <section id="viaje-detalles" hidden>
+            <h2 id="nombre-detalle"></h2>
+            <div id="weather-area"></div>
+
+            <h3>Tareas</h3>
+            <div>
+                <input id="task-input" placeholder="Nueva tarea" />
+                <button id="task-add">Agregar</button>
+            </div>
+            <ul id="task-list"></ul>
+        </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
