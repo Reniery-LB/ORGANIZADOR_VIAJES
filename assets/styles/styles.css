@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100%;
+  background: #74b9ff;
+}
+
+main {
+  max-width: 1000px;
+  margin: 28px auto;
+  padding: 16px;
+}
+
+section h1, section h2, h3 {
+  color: #222;
+  margin-bottom: 12px;
+}
+
+form#form-viaje {
+  background: rgba(255,255,255,0.95);
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form#form-viaje label {
+  font-size: 14px;
+  color: #222;
+}
+
+form#form-viaje input[type="text"],
+form#form-viaje input[type="date"],
+form#form-viaje input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cfd8e3;
+  background: #fff;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.validation-error {
+  color: #c62828;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+form#form-viaje button[type="submit"] {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #0984e3;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .18s ease;
+  align-self: stretch;
+}
+
+form#form-viaje button[type="submit"]:hover {
+  background: #0669b8;
+}
+
+#viaje-detalles {
+  background: #a29bfe; 
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+  align-items: start;
+  padding: 16px; 
+  border-radius: 10px;
+}
+
+#viaje-detalles > * {
+  background: rgba(255,255,255,0.95);
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+#nombre-detalle {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  color: #222;
+}
+
+#weather-area {
+  min-height: 72px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap: 12px;
+}
+
+#weather-area img {
+  width: 48px;
+  height: 48px;
+}
+
+#task-input {
+  width: calc(100% - 104px);
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid #cfd8e3;
+  font-size: 14px;
+}
+
+#task-add {
+  padding: 9px 12px;
+  margin-left: 8px;
+  border-radius: 8px;
+  border: none;
+  background: #6a0dad;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .18s ease;
+}
+
+#task-add:hover {
+  background: #5a0899;
+}
+
+#task-list {
+  list-style: none;
+  margin-top: 12px;
+  padding: 0;
+}
+
+#task-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e6e9ef;
+  background: #fff;
+  margin-bottom: 8px;
+}
+
+#task-list li button {
+  margin-left: auto;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #d63031;
+  color: white;
+  cursor: pointer;
+  transition: background-color .15s ease;
+}
+
+#task-list li button:hover {
+  background: #ff6b6b;
+}
+
+@media (max-width: 860px) {
+  main {
+    padding: 12px;
+    margin: 16px;
+  }
+  #viaje-detalles {
+    grid-template-columns: 1fr;
+  }
+  #task-input {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  #task-add {
+    width: 100%;
+    margin-left: 0;
+  }
+  form#form-viaje {
+    gap: 10px;
+  }
+}
